@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+
+}
+body {
+    background-color: #212528;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    text-align: center; 
+    position: fixed;
+    height: 70px;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: #212528;
+    z-index: 4;
+    transition: all 1s;
+}
+/* Navbar "active" animation*/
+nav.navActive {
+    height: 100%;
+    transition: 0.5s linear;
+}
+#brand-name {
+    position: absolute;
+    top: 28px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 20px;
+    margin: auto;
+}
+#toggle-button {
+    position: absolute;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-top: 24px;
+    right: 10vw;
+    width: 25px;
+    height: 20px;
+}
+.bar {
+    width: 100%;
+    height: 1px;
+    border: 1px solid #FFFFFF;
+    margin: 3px 0 3px;
+    background: #FFFFFF;
+    opacity: 1;
+    transition: 1s all;
+}
+
+/* Burger click animations */
+.bar:first-of-type.onClick {
+    transition: 0.8s all ease-in-out 0.2s;
+    transform: translateY(8px) rotate(45deg);  
+}
+.bar:nth-of-type(2).onClick {
+    transition: 0.5s ;
+    transform: rotate(900deg);
+    opacity: 0; 
+}
+.bar:last-of-type.onClick {
+    transition: 0.8s all ease-in-out 0.2s;
+    transform: translateY(-8px) rotate(-45deg);
+}
+#links-container {
+    align-self: flex-start;
+    margin-top: 70px;
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0 0;
+    width: 100%;
+}
+.navbar-links {
+    visibility: hidden;
+    margin: 1rem 0;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s all;    
+}
+/* Toggle links animations */
+.navbar-links.linksActive {
+   visibility: visible;
+   opacity: 1;
+   transition: 0.5s all;
+}
+.main-container {
+    margin: 0;
+    padding: 70px 0 0;
+}
+.container {
+    padding: 4rem 2rem 0;
+}
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 40px;
+}
+p {
+    margin: 1rem 0;
+}
+.sub-head {
+    font-size: 24px;
+    margin: 1rem 0;
+}
+
+#landing {
+    display: flex;
+    height: 100%;
+    width: 100vw;
+    padding: 30px 0; 
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    font-size: 18px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.1+67,0.1+67,1+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.1) 67%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.1) 67%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.1) 67%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */ 
+    margin: 0; 
+}
+#ashLayer {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: -1;
+}
+#background-layer {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+0,262626+50,000000+100&0.95+50,1+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(38,38,38,1) 50%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.95) 0%,rgba(38,38,38,0.95) 50%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.95) 0%,rgba(38,38,38,0.95) 50%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+}
+#titleBox {
+    width: 100vw;
+    padding: 0 2rem 0 2rem;
+}
+.img-wrap {
+    height: 80%;
+    width: auto;
+    justify-self: center;
+    text-align: center;
+}
+.img-wrap img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+#blurb {
+    z-index: 4;
+    background: #212528;
+    padding-bottom: 4rem;
+}
+ .blurb a {
+     color: #E5AB46;
+     font-size: 18px;
+     margin-bottom: 2rem;
+ }
+ #amazon-icon {
+     margin: 1rem 0;
+ }
+ #about {
+     background: #FFFFFF;
+     color: #171717;
+ }
+ .container.about {
+     padding-bottom: 3rem;
+ }
+ .img-wrap.about {
+     height: 35%;
+     width: 100%;
+ }
+ .img-wrap.about img {
+     object-fit: cover;
+ }
+
+ #blog {
+     color: #212528;
+     background: white;
+     height: 100%;
+ }
+ .blog-thumbnail {
+    border: 1px solid #A5A5A5;
+    padding: 1rem 1rem;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+ }
+.button {
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    padding: 1rem 1rem;
+    background: #E5AB46 ;
+    border-radius: 5px;
+    width: 100%;
+    margin: 1rem 0;
+
+}
+
+#newsletter {
+    height: 100vh;
+    color: #212528;
+    background: #D8D8D8;
+}
+form {
+    width: 100%;
+}
+form input {
+    width: 100%;
+    margin-bottom: 2rem;
+    height: 3rem;
+    color: #D8D8D8;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+}
+
+@media (min-width: 768px) {
+    /* For desktop: */
+}

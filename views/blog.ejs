@@ -1,0 +1,34 @@
+<%- include("partials/header") %>
+<%- include("partials/nav") %>
+<main class="main-container">
+    <section id="blog">
+        <div class="container">
+            <h1>Create a Blog Post</h1>
+
+            <form action="/blog" method="POST" id="blogInputForm">
+                <label for="blogDate">Enter the date of your blog</label>
+                <input type="datetime-local" name="blogDate" id="blogDate">
+                <script>
+                    //Set date on blog input form
+                    let today = new Date().toISOString().substr(0, 16);
+                    document.querySelector("#blogDate").value = today;
+                </script>
+                <label for="blogTitle">Enter the title of your blog</label>
+                <input type="text" name="blogTitle" id="blogTitle" required>
+                <label for="blogPost">Create your blog post</label>
+                <div>
+                    <textarea name="blogPost" id="blogPost"></textarea>
+                </div>
+                <button>Submit</button>
+                
+
+            </form>
+
+        </div>       
+
+    </section>
+
+</main>
+
+
+<%- include("partials/footer") %>

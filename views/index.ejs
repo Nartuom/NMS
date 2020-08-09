@@ -1,0 +1,65 @@
+<%- include("partials/header") %>
+<%- include("partials/nav") %>
+       
+<main class="main-container">
+       <section id="landing">
+              <div>
+                     <img id="ashLayer" src='/assets/ashes.png'>
+                     <div id=background-layer></div>
+                     <div id="titleBox">
+                            <div>
+                                   <p>
+                                          "What a great read. Gripping historical journey with exciting characters." 
+                                   </p>
+                            </div>
+                            <div class="img-wrap">
+                                   <img src="/assets/Cover@2x.png" alt="The front cover of the Novel 'No Man's son' by Simon Phelps. The cover depicts a Saex and wooden targe set over a backdrop of Saxon england.">
+                            </div>
+                     </div>
+              </div>
+       </section>
+
+       <section id="blurb">
+              <div class="container blurb">
+                     <h1>NO MAN'S SON</h1>
+                     <p class="sub-head">BOOK ONE</p>
+                     <p>‘No Man’s Son’ is the story of a violently orphaned teenager’s struggle to survive after capture during Harold Godwinson’s attack on his own King’s lands in 1052. As Harold’s family seek to regain their positions as Earls of England, this boy, Sar, must make his way.</p>
+                     <a>Read More</a>
+                     <div id="amazon-icon">                            
+                            <img src="/assets/amazon-logo.png" alt="Amazon logo image">
+                     </div>
+              </div>
+       </section>
+       <section id="about">
+              <div class="container about">
+                     <h2>ABOUT SIMON</h2>
+                     <p>Simon Phelps has had an interesting life so far. After his education was interrupted by an accident leaving him in a wheel-chair he co-founded a commune, then went on to work on a City Farm. He has always been deeply interested in, even obsessed by, history after being inspired in his childhood by adventurous historical novels and a good story. Now he wants to use his own cast of fictional characters and their journeys to illustrate the real histories of our past, while creating a good, entertaining read.</p>
+              </div>
+              <div class="img-wrap about">
+                     <img src="/assets/SImon&Mel.png" alt="A photo of Simon and his wife, Melanie, smiling at the snow covered landscape of the arctic circle">
+              </div>
+       </section>
+       <section id="blog">
+              <div class="container">
+                     <div>
+                            <h2>BLOG</h2>
+                     </div>
+                     <% blog.forEach((post) => {
+                            
+                            %>
+                            <div class="blog-thumbnail">
+                                   <h3><%= post["blogTitle"] %></h3>
+                                   <p><%= post["blogPost"] %></p>
+                            </div>
+                            <a class="button">Read More</a>
+
+                     <% });               
+                     %>
+                     
+
+              </div>
+              
+       </section>
+
+</main>
+<%- include("partials/footer") %>
