@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+<%- include("partials/nav.ejs") %>
+<main class="main-container">
+    <section id="blog">
+        <div class="blog-container">
+            <div id="blogNav">
+                <% [...posts].forEach(function(post) { 
+                    let date = post["blogDate"].toString().substr(0, 16);
+                    %>
+                    <div>
+                        <a href="#<%= post["_id"] %>"><%= date %></a>
+                    </div>
+                <% }) %>
+
+            </div>
+            <% [...posts].forEach(function(post) { %>
+                <div class="blogPosts" id="<%= post["_id"] %>">
+                    <h2><%= post["blogTitle"] %></h2>
+                    <%-post["blogPost"] %>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+</main>
+<%- include("partials/footer.ejs") %>

@@ -8,9 +8,7 @@
                      <div id=background-layer></div>
                      <div id="titleBox">
                             <div>
-                                   <p>
-                                          "What a great read. Gripping historical journey with exciting characters." 
-                                   </p>
+                                   <p>"What a great read. Gripping historical journey with exciting characters."</p>
                             </div>
                             <div class="img-wrap">
                                    <img src="/assets/Cover@2x.png" alt="The front cover of the Novel 'No Man's son' by Simon Phelps. The cover depicts a Saex and wooden targe set over a backdrop of Saxon england.">
@@ -30,6 +28,7 @@
                      </div>
               </div>
        </section>
+
        <section id="about">
               <div class="container about">
                      <h2>ABOUT SIMON</h2>
@@ -39,27 +38,20 @@
                      <img src="/assets/SImon&Mel.png" alt="A photo of Simon and his wife, Melanie, smiling at the snow covered landscape of the arctic circle">
               </div>
        </section>
+       
        <section id="blog">
               <div class="container">
                      <div>
                             <h2>BLOG</h2>
                      </div>
-                     <% blog.forEach((post) => {
-                            
-                            %>
-                            <div class="blog-thumbnail">
-                                   <h3><%= post["blogTitle"] %></h3>
-                                   <p><%= post["blogPost"] %></p>
-                            </div>
-                            <a class="button">Read More</a>
-
-                     <% });               
-                     %>
-                     
-
-              </div>
-              
+                            <% blog.forEach((post) => { %>
+                                   <div class="blog-thumbnail">
+                                          <h3><%= post["blogTitle"] %></h3>
+                                          <%- post["blogPost"] %>
+                                   </div>
+                                   <a href="/blogPosts" class="button">Read More</a>      
+                            <% }); %>
+              </div>  
        </section>
-
 </main>
 <%- include("partials/footer") %>

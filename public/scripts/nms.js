@@ -15,4 +15,4 @@ navToggle.addEventListener("click", () => {
     navBar.classList.toggle("navActive");
     
 });
-              
+
